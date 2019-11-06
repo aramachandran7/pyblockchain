@@ -5,7 +5,7 @@ from time import time
 from uiud import uiud4
 from textwrap import dedent
 
-
+from flask import Flask 
 
 
 # really, really simple blockchain framework. LOL
@@ -93,3 +93,26 @@ class Blockchain(object):
 	@property
 	def last_block(self):
 		return self.chain[-1]
+
+
+
+
+app = Flask(__main__)
+
+node_identifier = str(uiud4()).replace('-', '')
+
+blockchain = Blockchain()
+
+
+
+def mine():
+	return "We'll mine a new block "
+
+
+def new_transaction():
+	return "We'll do a new transaction"
+
+def full_chain():
+	response = {
+		
+	}
